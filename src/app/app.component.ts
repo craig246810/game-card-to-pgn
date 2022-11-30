@@ -19,8 +19,7 @@ export class AppComponent {
     const img = new Image();
     img.height = original.naturalHeight;
     img.width = original.naturalWidth;
-    img.src =
-      'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/sunset-quotes-21-1586531574.jpg';
+    img.src = original.src;
 
     const canvas: any = document.getElementById('canvas');
     canvas.height = original.naturalHeight;
