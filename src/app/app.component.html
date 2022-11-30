@@ -1,0 +1,19 @@
+<div>
+  <p>Compiled @ {{ now | date: 'short' }}</p>
+</div>
+
+<h2>Step 1: Convert to greyscale</h2>
+
+<div>
+  <img
+    src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/sunset-quotes-21-1586531574.jpg"
+    id="original"
+    alt=""
+  />
+</div>
+
+<button (click)="recogniseImage()">Recognise</button>
+
+<div>
+  <canvas id="canvas"></canvas>
+</div>

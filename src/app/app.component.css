@@ -1,0 +1,22 @@
+div, button {
+  margin-bottom: 8px;
+}
+
+p {
+  font-family: Lato;
+}
+
+#original {
+  border: 2px solid black;
+  height: 100%;
+  width: 100%;
+  max-height: auto;
+  max-width: auto;
+}
+
+#canvas {
+  border: 2px dashed red;
+  height:100%;
+  width: 100%;
+  max-width: auto;
+}
