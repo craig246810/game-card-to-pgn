@@ -30,16 +30,7 @@ export class AppComponent {
       img.crossOrigin = 'anonymous';
       ctx.drawImage(img, 0, 0);
 
-      console.log('canvas.width, canvas.height', canvas.width, canvas.height);
-
-      console.table({
-        width: canvas.width,
-        heigth: canvas.height,
-      });
-
       const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-
-      console.log('imgData.data.length', imgData.data.length);
 
       for (let i = 0; i < imgData.data.length; i += 4) {
         let count = imgData.data[i] + imgData.data[i + 1] + imgData.data[i + 2];

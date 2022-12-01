@@ -1,4 +1,5 @@
-div, button {
+div,
+button {
   margin-bottom: 8px;
 }
 
@@ -10,13 +11,19 @@ p {
   border: 2px solid black;
   height: 100%;
   width: 100%;
-  max-height: auto;
-  max-width: auto;
+  max-width: 300px;
 }
 
 #canvas {
   border: 2px dashed red;
-  height:100%;
+  height: 100%;
   width: 100%;
-  max-width: auto;
+  max-width: 300px;
+}
+
+.images-wrapper {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-evenly;
+  gap: 4%;
 }

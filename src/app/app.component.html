@@ -4,16 +4,18 @@
 
 <h2>Step 1: Convert to greyscale</h2>
 
-<div>
-  <img
-    src="https://www.notion.so/Chess-score-card-to-PGN-1c0a4342f1d64f6ba2a4ff36d55393cd#5a4523b6f324449cb91ef23e1e70b2d3"
-    id="original"
-    alt=""
-  />
+<div class="images-wrapper">
+  <div>
+    <img
+      src="https://cdn.jsdelivr.net/gh/craig246810/game-card-to-pgn@main/src/assets/chess_score_page.jpg"
+      id="original"
+      alt=""
+    />
+  </div>
+
+  <div>
+    <canvas id="canvas"></canvas>
+  </div>
 </div>
 
 <button (click)="recogniseImage()">Recognise</button>
-
-<div>
-  <canvas id="canvas"></canvas>
-</div>
