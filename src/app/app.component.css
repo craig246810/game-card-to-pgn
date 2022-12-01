@@ -8,10 +8,11 @@ p {
 }
 
 #original {
-  border: 2px solid black;
+  border: 2px dashed purple;
   height: 100%;
   width: 100%;
   max-width: 300px;
+  min-width: 200px;
 }
 
 #canvas {
@@ -19,6 +20,7 @@ p {
   height: 100%;
   width: 100%;
   max-width: 300px;
+  min-width: 200px;
 }
 
 .images-wrapper {
@@ -26,4 +28,13 @@ p {
   align-items: stretch;
   justify-content: space-evenly;
   gap: 4%;
+}
+
+.zoomable {
+  transition: transform 1s;
+}
+
+.zoomable:hover {
+  /* (125% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  transform: scale(1.25);
 }

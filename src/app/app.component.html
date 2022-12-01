@@ -1,20 +1,36 @@
 <div>
-  <p>Compiled @ {{ now | date: 'short' }}</p>
+  <p>Compiled {{ version }} @ {{ now | date: 'short' }}</p>
 </div>
 
-<h2>Step 1: Convert to greyscale</h2>
+<h2>Step 1: Preprocessing</h2>
+
+<div class="debug">
+  <pre>
+    {{ selectedImage | json }}
+  </pre>
+</div>
+
+<div>
+  <select name="select-image" id="select-image" [(ngModel)]="selectedImage">
+    <option [value]="image" *ngFor="let image of images">
+      {{ image.title }}
+    </option>
+  </select>
+</div>
 
 <div class="images-wrapper">
   <div>
     <img
-      src="https://cdn.jsdelivr.net/gh/craig246810/game-card-to-pgn@main/src/assets/chess_score_page.jpg"
+      *ngIf="selectedImage"
+      src="{{ selectedImage.src | cdn }}"
       id="original"
       alt=""
+      class="zoomable"
     />
   </div>
 
   <div>
-    <canvas id="canvas"></canvas>
+    <canvas id="canvas" class="zoomable"></canvas>
   </div>
 </div>
 
